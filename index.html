@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo – [Seu Nome]</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #1a1a1a;
+      background: #f4f2ed;
+      padding: 40px 20px;
+    }
+
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid #ddd8ce;
+      padding: 56px 60px;
+    }
+
+    /* ── HEADER ── */
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: end;
+      padding-bottom: 28px;
+      border-bottom: 2px solid #1a1a1a;
+      margin-bottom: 32px;
+    }
+
+    .nome {
+      font-family: 'EB Garamond', serif;
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      color: #1a1a1a;
+      line-height: 1.1;
+    }
+
+    .cargo {
+      font-family: 'EB Garamond', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .contatos {
+      text-align: right;
+      font-size: 12.5px;
+      color: #555;
+      line-height: 2;
+    }
+
+    .contatos a {
+      color: #555;
+      text-decoration: none;
+    }
+
+    /* ── LAYOUT ── */
+    .corpo {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar section {
+      margin-bottom: 28px;
+    }
+
+    .sidebar h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e0dbd0;
+    }
+
+    .sidebar p,
+    .sidebar li {
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tag-lista {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: #f4f2ed;
+      border: 1px solid #ddd8ce;
+      font-size: 11.5px;
+      color: #444;
+      padding: 3px 9px;
+      border-radius: 2px;
+    }
+
+    .barra-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .barra-label {
+      font-size: 12.5px;
+      color: #333;
+      width: 80px;
+      flex-shrink: 0;
+    }
+
+    .barra-bg {
+      flex: 1;
+      height: 5px;
+      background: #e8e4dc;
+      border-radius: 99px;
+    }
+
+    .barra-fill {
+      height: 100%;
+      background: #1a1a1a;
+      border-radius: 99px;
+    }
+
+    /* ── MAIN ── */
+    .main section {
+      margin-bottom: 30px;
+    }
+
+    .main h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 14px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e0dbd0;
+    }
+
+    .entrada {
+      margin-bottom: 18px;
+    }
+
+    .entrada-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .entrada-titulo {
+      font-family: 'EB Garamond', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .entrada-data {
+      font-size: 12px;
+      color: #999;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .entrada-sub {
+      font-size: 13px;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+
+    .entrada-desc {
+      font-size: 13px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .entrada-desc ul {
+      padding-left: 16px;
+      margin-top: 4px;
+    }
+
+    .entrada-desc li {
+      margin-bottom: 3px;
+    }
+
+    .resumo p {
+      font-size: 14px;
+      color: #333;
+      line-height: 1.75;
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .page { border: none; padding: 40px 50px; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <div class="nome">João da Silva</div>
+      <div class="cargo">Desenvolvedor de Software Sênior</div>
+    </div>
+    <div class="contatos">
+      <div>joao.silva@email.com</div>
+      <div>(11) 99999-0000</div>
+      <div>São Paulo, SP</div>
+      <div><a href="#">linkedin.com/in/joaosilva</a></div>
+      <div><a href="#">github.com/joaosilva</a></div>
+    </div>
+  </header>
+
+  <div class="corpo">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <section>
+        <h2>Formação</h2>
+        <ul>
+          <li><strong>B.Sc. Ciência da Computação</strong></li>
+          <li>USP – São Paulo</li>
+          <li style="color:#999; font-size:12px;">2015 – 2019</li>
+        </ul>
+        <br />
+        <ul>
+          <li><strong>MBA em Gestão de TI</strong></li>
+          <li>FGV – São Paulo</li>
+          <li style="color:#999; font-size:12px;">2020 – 2021</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Idiomas</h2>
+        <div class="barra-wrap">
+          <span class="barra-label">Português</span>
+          <div class="barra-bg"><div class="barra-fill" style="width:100%"></div></div>
+        </div>
+        <div class="barra-wrap">
+          <span class="barra-label">Inglês</span>
+          <div class="barra-bg"><div class="barra-fill" style="width:85%"></div></div>
+        </div>
+        <div class="barra-wrap">
+          <span class="barra-label">Espanhol</span>
+          <div class="barra-bg"><div class="barra-fill" style="width:50%"></div></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Habilidades</h2>
+        <div class="tag-lista">
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Docker</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Git</span>
+          <span class="tag">REST API</span>
+          <span class="tag">Scrum</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Certificações</h2>
+        <ul>
+          <li>AWS Certified Developer</li>
+          <li style="color:#999; font-size:12px; margin-bottom:6px;">2022</li>
+          <li>Google Cloud Professional</li>
+          <li style="color:#999; font-size:12px;">2023</li>
+        </ul>
+      </section>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <section class="resumo">
+        <h2>Perfil</h2>
+        <p>
+          Desenvolvedor com mais de 6 anos de experiência em construção de sistemas escaláveis e APIs de alto desempenho. Apaixonado por boas práticas de engenharia, trabalho colaborativo e entrega de valor ao usuário final.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experiência</h2>
+
+        <div class="entrada">
+          <div class="entrada-top">
+            <span class="entrada-titulo">Desenvolvedor Sênior</span>
+            <span class="entrada-data">Jan 2022 – atual</span>
+          </div>
+          <div class="entrada-sub">TechCorp Ltda. · São Paulo, SP</div>
+          <div class="entrada-desc">
+            <ul>
+              <li>Liderou a migração de um monolito legado para microsserviços, reduzindo o tempo de deploy em 60%.</li>
+              <li>Desenvolveu pipeline de dados em tempo real processando 500 mil eventos/dia com Kafka e Python.</li>
+              <li>Mentoria de 3 desenvolvedores júnior e condução de code reviews semanais.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entrada">
+          <div class="entrada-top">
+            <span class="entrada-titulo">Desenvolvedor Pleno</span>
+            <span class="entrada-data">Mar 2019 – Dez 2021</span>
+          </div>
+          <div class="entrada-sub">Startup XYZ · Remoto</div>
+          <div class="entrada-desc">
+            <ul>
+              <li>Construiu e manteve API REST em Node.js/TypeScript consumida por mais de 200 mil usuários.</li>
+              <li>Implementou autenticação com OAuth 2.0 e integração com gateways de pagamento.</li>
+              <li>Colaborou na definição de arquitetura front-end com React e Redux.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entrada">
+          <div class="entrada-top">
+            <span class="entrada-titulo">Desenvolvedor Júnior</span>
+            <span class="entrada-data">Ago 2017 – Fev 2019</span>
+          </div>
+          <div class="entrada-sub">Agência Digital ABC · São Paulo, SP</div>
+          <div class="entrada-desc">
+            <ul>
+              <li>Desenvolvimento de sites e sistemas web em PHP, HTML, CSS e JavaScript.</li>
+              <li>Suporte e manutenção de aplicações para clientes do setor varejista.</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Projetos de Destaque</h2>
+
+        <div class="entrada">
+          <div class="entrada-top">
+            <span class="entrada-titulo">OpenBudget</span>
+            <span class="entrada-data">2023</span>
+          </div>
+          <div class="entrada-sub">Projeto open source · github.com/joaosilva/openbudget</div>
+          <div class="entrada-desc">
+            Ferramenta de controle financeiro pessoal com mais de 1.200 estrelas no GitHub. Stack: Next.js, Prisma, PostgreSQL.
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+</div>
+</body>
